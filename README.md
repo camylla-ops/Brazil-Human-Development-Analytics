@@ -35,16 +35,4 @@ Explorar dados socioeconômicos brasileiros utilizando BigQuery para:
    - Documentação técnica de cada etapa  
 4. **Análise Colaborativa:** Discussão em equipe dos resultados  
 
----
 
-## 📊 Principais Consultas Realizadas  
-
-### 1. Média de IDH por Estado (1991-2010)  
-**Objetivo:** Comparar desempenho regional  
-```sql
-SELECT 
-  sigla_uf,
-  AVG(idh) AS idh_medio
-FROM `basedosdados.mundo_onu_adh.uf`
-GROUP BY sigla_uf
-ORDER BY idh_medio ASC;
