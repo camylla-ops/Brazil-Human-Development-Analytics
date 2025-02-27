@@ -16,7 +16,7 @@ Explorar dados socioeconômicos brasileiros utilizando BigQuery para:
 ---
 
 ## 🔍 Banco de Dados Utilizado  
-**Dataset:** [Atlas do Desenvolvimento Humano]([https://basedosdados.org/dataset/idhm](https://basedosdados.org/dataset/cbfc7253-089b-44e2-8825-755e1419efc8?table=65639055-2408-46b4-8f82-ecae3d04b800))  
+**Dataset:** [Atlas do Desenvolvimento Humano](https://basedosdados.org/dataset/idhm) - Base dos Dados
 **Organização:** ONU  
 **Período:** 1991-2010  
 **Indicadores-chave:**  
