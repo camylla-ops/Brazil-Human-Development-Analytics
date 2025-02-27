@@ -1,30 +1,50 @@
-# Projeto 04 - BIG QUERY
+# Análise de Indicadores Sociais com BigQuery  
+![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?logo=googlecloud&logoColor=white) 
+![SQL](https://img.shields.io/badge/SQL-005571?logo=mysql&logoColor=white)
 
-**Escola:** SoulCode Academy  
-**Curso:** Bootcamp Analista de Dados - Martech - AD2  
-**Professor(a):** Franciane Rodrigues  
-**Alunos:**
-- Camylla de Oliveira Pereira
-- Caroline Carneiro da Silva
-- Débora Patrícia Rodrigues Almeida
+**Bootcamp:** Análise de Dados - Martech - AD2 | SoulCode Academy  
+**Equipe:** Camylla Oliveira | Caroline Carneiro | Débora Almeida  
 
-## Descrição do Projeto
+---
 
-Projeto 04 realizado como parte do curso "Bootcamp Analista de Dados - Martech - AD2" na SoulCode Academy. Neste projeto, exploramos o Big Query utilizando uma base de dados selecionada.
+## 🎯 Objetivo do Projeto  
+Explorar dados socioeconômicos brasileiros utilizando BigQuery para:  
+- Praticar consultas SQL em ambiente de Big Data  
+- Identificar padrões regionais de desenvolvimento humano  
+- Gerar insights básicos para políticas públicas  
 
-## Instruções do Projeto
+---
 
-1. Acesse o site [Basedosdados](https://basedosdados.org/)
-2. Escolha uma base de dados e acesse no Big Query
-3. Realize no mínimo 5 consultas
-4. Explique cada consulta realizada
-5. Documente todas as etapas do projeto
-6. Trabalho realizado em trio
+## 🔍 Banco de Dados Utilizado  
+**Dataset:** [Atlas do Desenvolvimento Humano](https://basedosdados.org/dataset/idhm)  
+**Organização:** ONU  
+**Período:** 1991-2010  
+**Indicadores-chave:**  
+- IDH Municipal (IDHM)  
+- Expectativa de vida  
+- Taxa de fecundidade  
+- Renda per capita  
 
-## Banco de Dados Escolhido: Atlas do Desenvolvimento Humano (ADH)
+---
 
-**Resumo:** O Atlas do Desenvolvimento Humano no Brasil é um site que apresenta o Índice de Desenvolvimento Humano Municipal (IDHM) e mais de 200 indicadores relacionados à demografia, educação, renda, trabalho, habitação e vulnerabilidade para os municípios brasileiros.
+## ⚙️ Fluxo de Trabalho  
+1. **Seleção de Dados:** Escolha do dataset no portal Base dos Dados  
+2. **Exploração Inicial:** Análise da estrutura das tabelas no BigQuery  
+3. **Desenvolvimento de Consultas:**  
+   - 5 queries focadas em comparações regionais  
+   - Documentação técnica de cada etapa  
+4. **Análise Colaborativa:** Discussão em equipe dos resultados  
 
-**Organização:** Organização das Nações Unidas (ONU)  
-**Cobertura Temporal:** 1991 - 2010  
-**Link:** [Atlas do Desenvolvimento Humano](https://basedosdados.org/dataset/cbfc7253-089b-44e2-8825-755e1419efc8?table=65639055-2408-46b4-8f82-ecae3d04b800)
+---
+
+## 📊 Principais Consultas Realizadas  
+
+### 1. Média de IDH por Estado (1991-2010)  
+**Objetivo:** Comparar desempenho regional  
+```sql
+SELECT 
+  sigla_uf,
+  AVG(idh) AS idh_medio
+FROM `basedosdados.mundo_onu_adh.uf`
+GROUP BY sigla_uf
+ORDER BY idh_medio ASC;
