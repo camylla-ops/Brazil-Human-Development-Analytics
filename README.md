@@ -7,7 +7,7 @@
 
 ---
 
-## 🎯 Objetivo do Projeto  
+## Objetivo do Projeto  
 Explorar dados socioeconômicos brasileiros utilizando BigQuery para:  
 - Praticar consultas SQL em ambiente de Big Data  
 - Identificar padrões regionais de desenvolvimento humano  
@@ -15,7 +15,7 @@ Explorar dados socioeconômicos brasileiros utilizando BigQuery para:
 
 ---
 
-## 🔍 Banco de Dados Utilizado  
+##  Banco de Dados Utilizado  
 **Dataset:** [Atlas do Desenvolvimento Humano](https://basedosdados.org/dataset/idhm) - Base dos Dados
 **Organização:** ONU  
 **Período:** 1991-2010  
@@ -27,7 +27,7 @@ Explorar dados socioeconômicos brasileiros utilizando BigQuery para:
 
 ---
 
-## ⚙️ Fluxo de Trabalho  
+##  Fluxo de Trabalho  
 1. **Seleção de Dados:** Escolha do dataset no portal Base dos Dados  
 2. **Exploração Inicial:** Análise da estrutura das tabelas no BigQuery  
 3. **Desenvolvimento de Consultas:**  
